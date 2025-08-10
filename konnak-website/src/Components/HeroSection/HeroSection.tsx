@@ -1,0 +1,85 @@
+"use client";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import {  MotionDiv } from "../FramerMotion/FramerMotion";
+import { ArrowRight, Leaf, Wrench } from "lucide-react";
+import Link from "next/link";
+
+export default function HeroSection() {
+  const slides = [
+    {
+      image: "/images/HeroSection/green-future.png",
+      title: "Powering a Greener Future",
+      subtitle: "Bio-CBG/CNG • Green Hydrogen • SAF",
+      buttonText: "Explore Green Energy",
+      href: "/green-energy",
+      icon: <Leaf className="w-5 h-5" />,
+    },
+    {
+      image: "/images/HeroSection/blue-future.png",
+      title: "Engineering with Precision",
+      subtitle: "Oil Gas • Infrastructure • Future Energy",
+      buttonText: "Discover Engineering Services",
+      href: "/engineering-services",
+      icon: <Wrench className="w-5 h-5" />,
+    },
+  ];
+
+  return (
+    <section className="relative">
+      <Swiper
+        modules={[Autoplay, Pagination]}
+        autoplay={{ delay: 5000 }}
+        pagination={{
+          clickable: true,
+          bulletClass: "swiper-pagination-bullet !bg-white/60",
+          bulletActiveClass: "swiper-pagination-bullet-active !bg-white",
+        }}
+        loop
+        className="h-[600px] w-full"
+      >
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index}>
+            <div className="relative h-[600px] flex items-center justify-center">
+              <MotionDiv
+                initial={{ scale: 1.1 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 3, ease: "easeOut" }}
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: `url(${slide.image})` }}
+              />
+
+              <div className="absolute inset-0 bg-black/50" />
+
+              <MotionDiv
+                initial={{ y: 30, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="relative z-10 text-center max-w-3xl px-6"
+              >
+                <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
+                  {slide.title}
+                </h1>
+                <p className="text-lg md:text-xl text-white/90 mb-8">
+                  {slide.subtitle}
+                </p>
+
+                <Link
+                  href={slide.href}
+                  className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl group"
+                  aria-label={slide.buttonText}
+                >
+                  {slide.icon}
+                  <span>{slide.buttonText}</span>
+                  <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
+              </MotionDiv>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </section>
+  );
+}
