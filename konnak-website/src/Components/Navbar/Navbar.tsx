@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X } from "lucide-react"; 
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -17,7 +17,7 @@ export default function Navbar() {
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <Link href="/" className="flex items-center space-x-3 group">
-          <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-green-600 group-hover:border-[#0b2c3d] transition-colors duration-300">
+          <div className="relative w-12 h-12  overflow-hidden  ">
             <Image
               src="/images/logo/logo.jpeg"
               alt="KONNAK Engineering Logo"
@@ -35,10 +35,10 @@ export default function Navbar() {
             <Link
               key={item.href}
               href={item.href}
-              className="relative overflow-hidden px-5 py-2 text-white font-medium bg-[#0b2c3d] rounded-lg group shadow-md hover:shadow-lg transition-all duration-300"
+              className="relative overflow-hidden px-5 py-2 text-white font-medium bg-green-600  rounded-lg group shadow-md hover:shadow-lg transition-all duration-300"
             >
-              <span className="absolute inset-0 bg-green-600 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></span>
-              <span className="relative z-10">{item.label}</span>
+                <span className="absolute inset-0 bg-emerald-700 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></span>
+                <span className="relative z-10">{item.label}</span>
             </Link>
           ))}
         </div>
@@ -72,7 +72,7 @@ export default function Navbar() {
               key={item.href}
               href={item.href}
               onClick={() => setDrawerOpen(false)}
-              className="px-4 py-2 rounded-lg bg-[#0b2c3d] text-white hover:bg-green-600 transition-colors duration-300"
+              className="px-4 py-2 rounded-lg bg-green-600 text-white transition-colors duration-300"
             >
               {item.label}
             </Link>

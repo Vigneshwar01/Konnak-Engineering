@@ -9,6 +9,7 @@ export default function WhatwhoareSection() {
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: false, amount: 0.3 }}
       id="whoare"
+      className="scroll-mt-24"
     >
       <section className="py-14 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 text-center">
@@ -20,7 +21,7 @@ export default function WhatwhoareSection() {
             viewport={{ once: true }}
           >
             Who We Are
-            <span className="absolute -bottom-2 left-1/2 md:left-0 w-19 h-1 bg-green-500 transform -translate-x-1/2 md:translate-x-0 rounded"></span>
+            <span className="block h-1 w-20 bg-green-500 mt-2 rounded"></span>
           </MotionH2>
 
           <MotionP

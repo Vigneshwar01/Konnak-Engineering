@@ -7,7 +7,9 @@ export default function Home() {
   return (
     <div >
   <HeroSection/>
+  <div >
   <WhatwhoareSection/>
+  </div>
   <IndustrialExpertiseSection/>
   <SustainableEnergyAndContact/>
     </div>

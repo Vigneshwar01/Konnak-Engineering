@@ -3,9 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import {  MotionDiv } from "../FramerMotion/FramerMotion";
-import { ArrowRight, Leaf, Wrench } from "lucide-react";
-import Link from "next/link";
+import { MotionDiv } from "../FramerMotion/FramerMotion";
 
 export default function HeroSection() {
   const slides = [
@@ -13,17 +11,11 @@ export default function HeroSection() {
       image: "/images/HeroSection/green-future.png",
       title: "Powering a Greener Future",
       subtitle: "Bio-CBG/CNG • Green Hydrogen • SAF",
-      buttonText: "Explore Green Energy",
-      href: "/green-energy",
-      icon: <Leaf className="w-5 h-5" />,
     },
     {
       image: "/images/HeroSection/blue-future.png",
       title: "Engineering with Precision",
       subtitle: "Oil Gas • Infrastructure • Future Energy",
-      buttonText: "Discover Engineering Services",
-      href: "/engineering-services",
-      icon: <Wrench className="w-5 h-5" />,
     },
   ];
 
@@ -65,16 +57,6 @@ export default function HeroSection() {
                 <p className="text-lg md:text-xl text-white/90 mb-8">
                   {slide.subtitle}
                 </p>
-
-                <Link
-                  href={slide.href}
-                  className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl group"
-                  aria-label={slide.buttonText}
-                >
-                  {slide.icon}
-                  <span>{slide.buttonText}</span>
-                  <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
-                </Link>
               </MotionDiv>
             </div>
           </SwiperSlide>
