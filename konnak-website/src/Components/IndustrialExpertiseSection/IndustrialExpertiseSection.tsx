@@ -1,5 +1,5 @@
 "use client";
-import { Factory, Network } from "lucide-react";
+import {  Factory, Hammer, KeyRound, Network  } from "lucide-react";
 import { MotionDiv } from "../FramerMotion/FramerMotion";
 
 export default function WhatWeDoFlipCards() {
@@ -22,6 +22,26 @@ export default function WhatWeDoFlipCards() {
         "Digital Twin & Smart Plant Design",
         "As-Built & Handover",
         "Asset Integrity & Maintenance Data (CMMS)",
+      ],
+    },
+    {
+      title: "EPC Project Excellence",
+      icon: Hammer,
+      details: [
+        "Comprehensive Engineering Solutions",
+        "Global Procurement & Supply Chain",
+        "Safe & Efficient Construction",
+        "Quality Assurance & Compliance",
+      ],
+    },
+    {
+      title: "Turnkey Project Solutions",
+      icon: KeyRound,
+      details: [
+        "End-to-End Project Delivery",
+        "Single Point of Responsibility",
+        "Ready-to-Operate Facilities",
+        "On-Time & Cost-Effective Execution",
       ],
     },
   ];

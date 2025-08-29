@@ -17,6 +17,16 @@ export default function HeroSection() {
       title: "Engineering with Precision",
       subtitle: "Oil Gas • Infrastructure • Future Energy",
     },
+    {
+      image: "/images/HeroSection/epc-project.png",
+      title: "EPC Project Excellence",
+      subtitle: "Seamless Engineering • Procurement • Construction",
+    },
+    {
+      image: "/images/HeroSection/turnkey-project.png",
+      title: "Turnkey Project Solutions",
+      subtitle: "Complete Delivery • On Time • End-to-End Execution",
+    },
   ];
 
   return (

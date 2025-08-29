@@ -25,7 +25,7 @@ export default function Navbar() {
               className="object-cover"
             />
           </div>
-          <span className="text-xl font-extrabold tracking-wide text-[#0b2c3d] group-hover:text-green-600 transition-colors duration-300">
+          <span className="text-sm lg:text-xl font-extrabold tracking-wide text-[#0b2c3d] group-hover:text-green-600 transition-colors duration-300">
             KONNAK ENGINEERING
           </span>
         </Link>
